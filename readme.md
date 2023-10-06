@@ -101,6 +101,19 @@ Handout code is provided to create a structure for the project. You should compl
 2. Complete the `create_rag_prompt` function as described in the function's docstring.
 3. Complete the `main` function following the inline TODO comments.
 
+A complete run of your program should look something like this:
+
+```
+Assistant: Please enter a question for me to answer.
+User: What is Python?
+Assistant: Python is a high-level, general-purpose programming language that emphasizes code readability with the use of significant indentation. It supports multiple programming paradigms and is often described as a "batteries included" language due to its comprehensive standard library.
+```
+
+Testing
+-------
+
+When writing programs to solve multi-step problems, it is often helpful to break the program down into steps using functions as we have done in the handout code here. This creates more readable code, but it also allows us to test our solutions to the subproblems without testing the entire program. Some basic tests are included in the `main` function to demonstrate that `get_topic` and `create_rag_prompt` work correctly before using them. Feel free to add, change, or remove these tests as you develop your program to help you get these functions working correctly.
+
 Resources
 ---------
 
