@@ -1,7 +1,7 @@
 Retrieval Augmented Generation
 ==============================
 
-This programming excecise explores using retrieval augmented generation (RAG) to ground large language models to help generate factual responses and prevent hallucinations. This experiences is targetted toward folks who are extremely new to Python and programming and has two distinct learning objectives:
+This programming excecise explores using [retrieval augmented generation](https://arxiv.org/abs/2005.11401) (RAG) to ground large language models to help generate factual responses and prevent hallucinations. This experiences is targetted toward folks who are extremely new to Python and programming and has two distinct learning objectives:
 
 1. Gain familiarity with commonly used string methods
 2. Develop a basic understand of retrieval augmented generation for LLMs
@@ -90,7 +90,25 @@ Create a chatbot that can answer very basic questions about topics found in ques
 
 Note that current language models are limited in the amount of context that they can handle. This limit exists for most current models, and the simple models used here can only handle a few hundred words of context. In addition, generation will take longer for longer prompts. This means that **you should only have one context document supplied for each user question**.
 
-Specifically, your application should be able to correctly answer the following questions:
+Your application should be able to correctly answer the following questions:
 
 - Who created Python? (Guido van Rossum)
 - How many moons does Saturn have? (146)
+
+Handout code is provided to create a structure for the project. You should complete the following within the handout code:
+
+1. Complete the `get_topic` function as described in the function's docstring.
+2. Complete the `create_rag_prompt` function as described in the function's docstring.
+3. Complete the `main` function following the inline TODO comments.
+
+Resources
+---------
+
+This lab is expected to make use of string function, formatting, indexing, and/or slicing. The following resources may be helpful to learn more about these topics:
+
+- [PY4E Strings Chapter](https://www.py4e.com/html3/06-strings)
+- [Formatted String Literals Documentation](https://docs.python.org/3/reference/lexical_analysis.html#f-strings)
+- [str.strip](https://docs.python.org/3/library/stdtypes.html#str.strip)
+- [str.split](https://docs.python.org/3/library/stdtypes.html#str.split)
+- [str.title](https://docs.python.org/3/library/stdtypes.html#str.title)
+- [String slicing syntax from SO](https://stackoverflow.com/a/509295)
