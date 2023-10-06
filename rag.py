@@ -4,7 +4,8 @@ import languagemodels
 def get_topic(question):
     """Get the topic for a question
 
-    Returns a single topic related to a question.
+    Returns a single topic related to a question or None if not topic is
+    found.
 
     This needs to only support a very restricted topic computation that
     will simply return the second capitalized word. For example, if we
