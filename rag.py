@@ -33,7 +33,7 @@ def create_rag_prompt(question, context):
 
     The prompt must in the following form exactly:
 
-    "Answer from the context: [user question] Context: [supplied context]"
+    "Answer from context: [user question] Context: [supplied context]"
 
     For example:
 
