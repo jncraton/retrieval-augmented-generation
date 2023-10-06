@@ -1,17 +1,17 @@
 Retrieval Augmented Generation
 ==============================
 
-This programming excecise explores using [retrieval augmented generation](https://arxiv.org/abs/2005.11401) (RAG) to ground large language models to help generate factual responses and prevent hallucinations. This experiences is targetted toward folks who are extremely new to Python and programming and has two distinct learning objectives:
+This programming exercise explores using [retrieval augmented generation](https://arxiv.org/abs/2005.11401) (RAG) to ground large language models to help generate factual responses and prevent hallucinations. This experiences is targeted toward folks who are extremely new to Python and programming and has two distinct learning objectives:
 
 1. Gain familiarity with commonly used string methods
 2. Develop a basic understand of retrieval augmented generation for LLMs
 
-Language Modelling
+Language Modeling
 ------------------
 
-Language modelling is the task of predicting one comes next in a language utterance. 
+Language modeling is the task of predicting one comes next in a language utterance. 
 
-For example, consider the phrace "They ran to a local". A language model could [compute probabilities](https://exbert-project-exbert.hf.space/client/exBERT.html?model=gpt2&modelKind=autoregressive&sentence=They%20ran%20to%20a%20local&layer=11&heads=..0,1,2,3,4,5,6,7,8,9,10,11&threshold=0.7&tokenInd=null&tokenSide=null&maskInds=..&hideClsSep=true) of the next word in this phrase as:
+For example, consider the phrase "They ran to a local". A language model could [compute probabilities](https://exbert-project-exbert.hf.space/client/exBERT.html?model=gpt2&modelKind=autoregressive&sentence=They%20ran%20to%20a%20local&layer=11&heads=..0,1,2,3,4,5,6,7,8,9,10,11&threshold=0.7&tokenInd=null&tokenSide=null&maskInds=..&hideClsSep=true) of the next word in this phrase as:
 
 | Word       | Probability |
 | ---------- | ----------- |
@@ -43,7 +43,7 @@ We can then use this package to create simple LLM completions for instruction-or
 Hallucinations
 --------------
 
-Unfortunately, large language models may not always answer in a factually correct manner. The relatively small model running locally via the `languagemodels` package will commonly generate inaccurate results (sometimes called "hallicinations") even for relatively simple prompts. For example:
+Unfortunately, large language models may not always answer in a factually correct manner. The relatively small model running locally via the `languagemodels` package will commonly generate inaccurate results (sometimes called "hallucinations") even for relatively simple prompts. For example:
 
 ```python
 >>> import languagemodels
