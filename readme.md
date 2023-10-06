@@ -43,7 +43,7 @@ We can then use this package to create simple LLM completions for instruction-or
 Hallucinations
 --------------
 
-Unfortunately, for a variety of reasons large language models may not always answer truthfully. The relatively small model running locally via `languagemodels` package will commonly generate inaccurate results (sometimes called "hallicinations") even for relatively simple prompts. For example:
+Unfortunately, large language models may not always answer in a factually correct manner. The relatively small model running locally via the `languagemodels` package will commonly generate inaccurate results (sometimes called "hallicinations") even for relatively simple prompts. For example:
 
 ```python
 >>> import languagemodels
@@ -70,7 +70,7 @@ One way to address hallucinations is to provide factual context in the LLM promp
 'Guido created Python'
 ```
 
-That may not seem useful, as we have to know the answer to our question in order to have it answered, but this technique can be used to with documents to provide grounded answers from the document. Consider the following example where we use a helper function to context from Wikipedia:
+That may not seem useful, as we have to know the answer to our question in order to have it answered, but this technique can be used to with larger documents to provide grounded answers from the document. Consider the following example where we use a helper function to get context from Wikipedia:
 
 ```python
 >>> import languagemodels
@@ -86,9 +86,9 @@ This demonstrates how we can use retrieval from a set of documents to provide kn
 Task
 ----
 
-Create a chatbot that can answer very basic questions about topics found in questions. This should be accomplished using retrieval-augmented generation as described above.
+Create a chatbot that can answer very basic questions about topics found within the questions. This should be accomplished using retrieval-augmented generation as described above.
 
-Note that current language models are limited in the amount of context that they can handle. This limit exists for most current models, and the simple models used here can only handle a few hundred words of context. In addition, generation will take longer for longer prompts. This means that **you should only have one context document supplied for each user question**.
+Note that current language models are limited in the amount of context that they can handle. This limit exists for most current models, and the simple models used here can only handle a few hundred words of context. In addition, generation will take longer for longer prompts. This means that you should only have one context document supplied for each user question.
 
 Your application should be able to correctly answer the following questions:
 
