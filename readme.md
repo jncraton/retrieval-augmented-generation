@@ -90,14 +90,7 @@ Task
 
 Create a chatbot that can answer very basic questions about topics found within the questions. This should be accomplished using retrieval-augmented generation as described above.
 
-Note that current language models are limited in the amount of context that they can handle. This limit exists for most current models, and the simple models used here can only handle a few hundred words of context. In addition, generation will take longer for longer prompts. This means that you should only have one context document supplied for each user question.
-
-Your application should be able to correctly answer the following questions:
-
-- Who created Python? (Guido van Rossum)
-- How many moons does Saturn have? (146)
-
-Handout code is provided to create a structure for the project. You should complete the following within the handout code:
+Handout code is provided to create a structure for the project in [rag.py](rag.py). You should complete the following within the handout code:
 
 1. Complete the `get_topic` function as described in the function's docstring.
 2. Complete the `create_rag_prompt` function as described in the function's docstring.
@@ -115,6 +108,11 @@ Testing
 -------
 
 When writing programs to solve multi-step problems, it is often helpful to break the program down into steps using functions as we have done in the handout code here. This creates more readable code, but it also allows us to test our solutions to the subproblems without testing the entire program. Some basic tests are included in the `main` function to demonstrate that `get_topic` and `create_rag_prompt` work correctly before using them. Feel free to add, change, or remove these tests as you develop your program to help you get these functions working correctly.
+
+Once your program is complete, your application should be able to correctly answer the following questions:
+
+- Who created Python? (Guido van Rossum)
+- How many moons does Saturn have? (146)
 
 Resources
 ---------
