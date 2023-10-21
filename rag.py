@@ -68,11 +68,11 @@ def main():
 
     # TODO: Call `input` to get a question from the user
 
-    # Call `get_topic` to get a topic for the question
+    # TODO: Call `get_topic` to get a topic based on the question
 
     # TODO: Retrieve context from Wikipedia if we have a topic
 
-    # TODO: Create prompt for the LLM by calling `create_rag_prompt`
+    # TODO: Create a prompt for the LLM by calling `create_rag_prompt`
 
     # TODO: Generate a response from the LLM
 
