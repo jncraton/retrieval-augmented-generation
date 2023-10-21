@@ -1,7 +1,7 @@
 Retrieval Augmented Generation
 ==============================
 
-This programming exercise explores using [retrieval augmented generation](https://arxiv.org/abs/2005.11401) (RAG) to ground large language models to help generate factual responses and prevent hallucinations. This experiences is targeted toward folks who are extremely new to Python and programming and has two distinct learning objectives. After students complete this project, they will be able to:
+This programming exercise explores using [retrieval augmented generation](https://arxiv.org/abs/2005.11401) (RAG) to ground large language models to help generate factual responses and prevent hallucinations. This experience is targeted toward learners who are new to Python programming and has two distinct learning objectives. After students complete this project, they should be able to:
 
 1. Use strings in Python as discussed in [PY4E Chapter 6](https://www.py4e.com/html3/06-strings)
 2. Describe the purpose of retrieval augmented generation for LLMs
@@ -9,7 +9,7 @@ This programming exercise explores using [retrieval augmented generation](https:
 Language Modeling
 ------------------
 
-Language modeling is the task of predicting one comes next in a language utterance. 
+Language modeling is the task of predicting what word comes next in a language utterance. 
 
 For example, consider the phrase "They ran to a local". A language model could [compute probabilities](https://exbert-project-exbert.hf.space/client/exBERT.html?model=gpt2&modelKind=autoregressive&sentence=They%20ran%20to%20a%20local&layer=11&heads=..0,1,2,3,4,5,6,7,8,9,10,11&threshold=0.7&tokenInd=null&tokenSide=null&maskInds=..&hideClsSep=true) of the next word in this phrase as:
 
@@ -21,10 +21,12 @@ For example, consider the phrase "They ran to a local". A language model could [
 | restaurant | 0.02        |
 | grocery    | 0.02        |
 
-These probabilities can then be used for many tasks including compression and generation. In this case (assuming greedy sampling) the model would generate "hospital" as the next word in the sequence.
+These probabilities can then be used for many tasks including compression and generation. For the above prompt, a generative model would generate "hospital" (assuming greedy sampling) as the next word in the sequence.
 
 Language Models in Python
 -------------------------
+
+Developing a deep understanding of the inner workings of modern large language models (LLMs) is out of the scope of this assignment, but we are still able to prompt them to create a generative output.
 
 There are numerous Python packages available for interacting with language models. One of the simplest for new learners is the [languagemodels](https://pypi.org/project/languagemodels/) package. It can be installed simply using the following command in your system shell given that you already have Python 3 and pip installed properly:
 
@@ -117,7 +119,7 @@ Once your program is complete, your application should be able to correctly answ
 Resources
 ---------
 
-This lab is expected to make use of string function, formatting, indexing, and/or slicing. The following resources may be helpful to learn more about these topics:
+This lab is expected to make use of string functions, formatting, indexing, and/or slicing. The following resources may be helpful to learn more about these topics:
 
 - [PY4E Strings Chapter](https://www.py4e.com/html3/06-strings)
 - [Formatted String Literals Documentation](https://docs.python.org/3/reference/lexical_analysis.html#f-strings)
