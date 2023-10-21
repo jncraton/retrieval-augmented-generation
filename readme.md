@@ -125,3 +125,11 @@ This lab is expected to make use of string function, formatting, indexing, and/o
 - [str.split](https://docs.python.org/3/library/stdtypes.html#str.split)
 - [str.title](https://docs.python.org/3/library/stdtypes.html#str.title)
 - [String slicing syntax from SO](https://stackoverflow.com/a/509295)
+
+Additional Exploration
+----------------------
+
+Once you have a working program, there are few other things you could try to get a deeper understanding of these topics.
+
+1. Enhance `get_topic` to perform more robust topic search. It can currently identify single word proper nouns such as "Python", but it won't work properly on longer proper nouns such as "Taylor Swift". Try to enhance this function to make it more robust.
+2. Explore different prompt formats in `create_rag_prompt`. The formatting and language used in a prompt will change the way a model responds. Experiment with other prompt format and observe how performance changes.
