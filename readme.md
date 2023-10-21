@@ -1,10 +1,10 @@
 Retrieval Augmented Generation
 ==============================
 
-This programming exercise explores using [retrieval augmented generation](https://arxiv.org/abs/2005.11401) (RAG) to ground large language models to help generate factual responses and prevent hallucinations. This experiences is targeted toward folks who are extremely new to Python and programming and has two distinct learning objectives:
+This programming exercise explores using [retrieval augmented generation](https://arxiv.org/abs/2005.11401) (RAG) to ground large language models to help generate factual responses and prevent hallucinations. This experiences is targeted toward folks who are extremely new to Python and programming and has two distinct learning objectives. After students complete this project, they will be able to:
 
-1. Gain familiarity strings as discussed in [PY4E Chapter 6](https://www.py4e.com/html3/06-strings)
-2. Develop a basic understand of retrieval augmented generation for LLMs
+1. Use strings in Python as discussed in [PY4E Chapter 6](https://www.py4e.com/html3/06-strings)
+2. Describe the purpose of retrieval augmented generation for LLMs
 
 Language Modeling
 ------------------
