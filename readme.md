@@ -59,6 +59,8 @@ Hallucinations can also occur when attempting to prompt a model for specific det
 'The creator of Python is Tim Berners-Lee.'
 ```
 
+This time, the model simply returned a confabulated answer to the question. For those unaware, [Tim Berners-Lee](https://en.wikipedia.org/wiki/Tim_Berners-Lee) is perhaps best known for inventing the World Wide Web, while the Python programming language was created by [Guido van Rossum](https://en.wikipedia.org/wiki/Guido_van_Rossum).
+
 Providing Context
 -----------------
 
