@@ -38,8 +38,8 @@ We can then use this package to create simple LLM completions for instruction-or
 
 ```python
 >>> import languagemodels
->>> languagemodels.do("Answer the question: What is the capital of France?")
-'Paris.'
+>>> languagemodels.do("What is the capital of France?")
+'The capital of France is Paris.'
 ```
 
 Hallucinations
@@ -49,19 +49,19 @@ Unfortunately, large language models may not always answer in a factually correc
 
 ```python
 >>> import languagemodels
->>> languagemodels.do("Answer the question: What are the names of Earth's 3 moons?")
-'The names of Earth's 3 moons are: 1. Ganymede 2. Scorpius 3. Neptune'
+>>> languagemodels.do("What are Earth's 3 moons?")
+Earth's 3 moons are...
 ```
 
 Hallucinations can also occur when attempting to prompt a model for specific details. For example:
 
 ```python
 >>> import languagemodels
->>> languagemodels.do("Answer the question: Who created Python?")
-'The creator of Python is Tim Berners-Lee.'
+>>> languagemodels.do("When was the Morris Worm deployed?")
+The Morris Worm was deployed in 2018.
 ```
 
-This time, the model simply returned a confabulated answer to the question. For those unaware, [Tim Berners-Lee](https://en.wikipedia.org/wiki/Tim_Berners-Lee) is perhaps best known for inventing the World Wide Web, while the Python programming language was created by [Guido van Rossum](https://en.wikipedia.org/wiki/Guido_van_Rossum).
+This time, the model simply returned a confabulated answer to the question. For those unaware, the [Morris Worm](https://en.wikipedia.org/wiki/Morris_worm) is one of the earliest popular examples of a computer worm, and it was deployed on November 2, 1988.
 
 Providing Context
 -----------------
@@ -70,19 +70,19 @@ One way to address hallucinations is to provide factual context in the LLM promp
 
 ```python
 >>> import languagemodels
->>> languagemodels.do("Answer from context: Who created Python? Context: Guido created Python.")
-'Guido created Python'
+>>> languagemodels.do("Answer from context: When was the Morris Worm deployed? Context: The Morris worm or Internet worm of November 2, 1988, is one of the oldest computer worms distributed via the Internet")
+'The Morris Worm was deployed on November 2, 1988.'
 ```
 
 That may not seem useful, as we have to know the answer to our question in order to have it answered, but this technique can be used to with larger documents to provide grounded answers from the document. Consider the following example where we use a helper function to get context from Wikipedia:
 
 ```python
 >>> import languagemodels
->>> python_wiki = languagemodels.get_wiki("Python")
->>> python_wiki
-'Python is a high-level, general-purpose programming language...'
->>> languagemodels.do(f"Answer from context: Who created Python? Context: {python_wiki}")
-'Guido van Rossum created Python.'
+>>> morris_wiki = languagemodels.get_wiki("Morris Worm")
+>>> morris_wiki
+'The Morris Worm or...'
+>>> languagemodels.do(f"Answer from context: When was the Morris Worm deployed? Context: {morris_wiki}")
+'The Morris Worm was deployed on November 2, 1988.'
 ```
 
 This demonstrates how we can use retrieval from a set of documents to provide knowledge and grounding to large language models.
@@ -135,3 +135,4 @@ Once you have a working program, there are few other things you could try to get
 
 1. Enhance `get_topic` to perform more robust topic search. It can currently identify single word proper nouns such as "Python", but it won't work properly on longer proper nouns such as "Taylor Swift". Try to enhance this function to make it more robust.
 2. Explore different prompt formats in `create_rag_prompt`. The formatting and language used in a prompt will change the way a model responds. Experiment with other prompt format and observe how performance changes.
+3. 
