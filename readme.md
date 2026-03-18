@@ -118,8 +118,8 @@ When writing programs to solve multi-step problems, it is often helpful to break
 
 Once your program is complete, your application should be able to correctly answer the following questions:
 
+- What is the orbital period of Saturn? (29.45 years)
 - Who created Python? (Guido van Rossum)
-- How many moons does Saturn have? (146)
 
 Resources
 ---------
