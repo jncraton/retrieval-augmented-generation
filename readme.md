@@ -107,8 +107,8 @@ A complete run of your program should look something like this:
 
 ```
 Assistant: Please enter a question for me to answer.
-User: What is Python?
-Assistant: Python is a high-level, general-purpose programming language that emphasizes code readability with the use of significant indentation. It supports multiple programming paradigms and is often described as a "batteries included" language due to its comprehensive standard library.
+User: What is the population of Germany?
+Assistant: The population of Germany is approximately 83 million.
 ```
 
 Testing
@@ -119,7 +119,7 @@ When writing programs to solve multi-step problems, it is often helpful to break
 Once your program is complete, your application should be able to correctly answer the following questions:
 
 - What is the orbital period of Saturn? (29.45 years)
-- Who created Python? (Guido van Rossum)
+- What is the population of Germany? (83 million)
 
 Resources
 ---------
