@@ -1,3 +1,11 @@
+import sys
+
+# Skip using Thonny's vendored package version to fix issue with old version of `filelock`
+sys.path[:] = [
+    p for p in sys.path
+    if not p.replace("\\", "/").lower().endswith("/thonny/vendored_libs")
+]
+
 import languagemodels
 
 
